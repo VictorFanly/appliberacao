@@ -1,0 +1,15 @@
+
+==================================================
+15/01/2026 10:12:25
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\appliberacao\ui.py", line 379, in gerar
+    registrar_liberacao(registro)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\user\Desktop\appliberacao\sheets.py", line 39, in registrar_liberacao
+    aba = conectar_planilha()
+  File "C:\Users\user\Desktop\appliberacao\sheets.py", line 18, in conectar_planilha
+    creds = carregar_credenciais()
+  File "C:\Users\user\Desktop\appliberacao\sheets.py", line 59, in carregar_credenciais
+    with open(caminho_recurso("datasec"), "r", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'datasec'
