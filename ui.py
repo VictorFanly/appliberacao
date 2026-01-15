@@ -11,7 +11,16 @@ import re
 import os
 
 # ================= FUNÇÕES DE DOCUMENTO ================= #
-CONFIG_ARQ = "config.json"
+def caminho_config():
+    pasta = os.path.join(
+        os.getenv("APPDATA"),
+        "GeradorLiberacao"
+    )
+    os.makedirs(pasta, exist_ok=True)
+    return os.path.join(pasta, "config.json")
+
+CONFIG_ARQ = caminho_config()
+
 
 def carregar_config():
     if os.path.exists(CONFIG_ARQ):
